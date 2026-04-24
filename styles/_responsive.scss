@@ -1,0 +1,93 @@
+@media (max-width: 900px) {
+  #about {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-images {
+    max-width: 420px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-wrap {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .exp-item {
+    grid-template-columns: 160px 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 64px 20px;
+  }
+
+  nav {
+    top: 12px;
+
+    a {
+      padding: 8px 12px;
+
+      span { display: none; }
+    }
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.large {
+    grid-column: span 1;
+    aspect-ratio: 4 / 3;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+
+    > * { border-radius: 0 !important; }
+    > *:first-child { border-radius: var(--radius-md) var(--radius-md) 0 0 !important; }
+    > *:last-child  { border-radius: 0 0 var(--radius-md) var(--radius-md) !important; }
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-item {
+    &:nth-child(odd) {
+      padding-right: 0;
+      border-right: none;
+    }
+
+    &:nth-child(even) {
+      padding-left: 0;
+    }
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .exp-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

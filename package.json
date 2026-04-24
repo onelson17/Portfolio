@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass styles/main.scss styles/main.css",
+    "watch": "sass --watch styles/main.scss styles/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onelson17/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/onelson17/Portfolio/issues"
+  },
+  "homepage": "https://github.com/onelson17/Portfolio#readme",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}

@@ -1,0 +1,41 @@
+footer {
+  border-top: 1px solid var(--gray-200);
+  padding: 32px 24px;
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  p {
+    font-size: 13px;
+    color: var(--gray-400);
+  }
+
+  nav {
+    position: static;
+    transform: none;
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+    max-width: none;
+    gap: 0;
+
+    a {
+      font-size: 13px;
+      color: var(--gray-400);
+      padding: 4px 10px;
+
+      &:hover {
+        background: none;
+        color: var(--black);
+      }
+    }
+  }
+}

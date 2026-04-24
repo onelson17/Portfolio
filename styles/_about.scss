@@ -1,0 +1,46 @@
+#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  img {
+    width: 100%;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+
+    &:first-child {
+      margin-top: 32px;
+    }
+  }
+}
+
+.about-content {
+  h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 20px;
+
+    em {
+      font-style: italic;
+      color: var(--gray-600);
+    }
+  }
+
+  p {
+    color: var(--gray-600);
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 32px;
+    line-height: 1.8;
+  }
+}
