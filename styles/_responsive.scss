@@ -31,14 +31,11 @@
     padding: 64px 20px;
   }
 
-  nav {
-    top: 12px;
+  #navbar {
+    padding: 0 20px;
 
-    a {
-      padding: 8px 12px;
-
-      span { display: none; }
-    }
+    .nav-logo-name { display: none; }
+    .nav-links a { padding: 7px 12px; font-size: 13px; }
   }
 
   .projects-grid {

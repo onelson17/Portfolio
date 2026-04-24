@@ -15,25 +15,18 @@ footer {
   }
 
   nav {
-    position: static;
-    transform: none;
-    background: none;
-    backdrop-filter: none;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    height: auto;
-    width: auto;
-    max-width: none;
-    gap: 0;
+    display: flex;
+    gap: 4px;
 
     a {
       font-size: 13px;
       color: var(--gray-400);
       padding: 4px 10px;
+      text-decoration: none;
+      border-radius: var(--radius-pill);
+      transition: color 0.2s;
 
       &:hover {
-        background: none;
         color: var(--black);
       }
     }
