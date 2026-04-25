@@ -30,14 +30,10 @@
   section {
     padding: 64px 20px;
   }
-
-  #navbar {
-    padding: 0 20px;
-
-    .nav-logo-name { display: none; }
-    .nav-links a { padding: 7px 12px; font-size: 13px; }
+  #hero {
+    min-height: auto;
+  
   }
-
   .projects-grid {
     grid-template-columns: 1fr;
   }

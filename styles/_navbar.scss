@@ -76,6 +76,7 @@
   align-items: center;
   gap: 4px;
   flex-shrink: 0;
+  margin-left: 20px;
 
   a {
     width: 36px;
@@ -93,4 +94,120 @@
       color: var(--black);
     }
   }
+}
+
+// ── HAMBURGER ──
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+  flex-shrink: 0;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--black);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+    transform-origin: center;
+  }
+
+  &.open {
+    span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+}
+
+// ── MOBILE MENU ──
+.nav-mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 8px 24px 28px;
+  flex-direction: column;
+  gap: 24px;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+
+  &.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--black);
+      text-decoration: none;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--gray-100);
+      transition: color 0.2s;
+
+      &:last-child { border-bottom: none; }
+      &:hover, &.active { color: var(--gray-600); }
+    }
+  }
+}
+
+.nav-mobile-socials {
+  display: flex;
+  gap: 12px;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-600);
+    text-decoration: none;
+    padding: 8px 14px;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+      background: var(--gray-100);
+      color: var(--black);
+    }
+  }
+}
+
+// ── RESPONSIVE ──
+@media (max-width: 640px) {
+  #navbar {
+    padding: 0 20px;
+
+    .nav-links,
+    .nav-socials { display: none; }
+
+    .nav-logo-name { display: none; }
+  }
+
+  .nav-hamburger { display: flex; }
+
+  .nav-mobile-menu { display: flex; }
 }
