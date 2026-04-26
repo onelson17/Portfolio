@@ -18,7 +18,12 @@
 
     &:first-child {
       margin-top: 32px;
+      object-position: center 8%;
     }
+  }
+
+  .about-photo-main {
+    object-position: center 8%;
   }
 }
 

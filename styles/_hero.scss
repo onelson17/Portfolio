@@ -66,17 +66,18 @@
     width: 68px;
     height: 68px;
     border-radius: 50%;
-    background: #e8e8e4;
     border: 2px solid rgba(255, 255, 255, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-serif);
-    font-size: 20px;
-    font-style: italic;
-    color: #111110;
+    overflow: hidden;
     flex-shrink: 0;
     position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 12%;
+      display: block;
+    }
 
     &-online {
       position: absolute;
@@ -87,6 +88,7 @@
       border-radius: 50%;
       background: #4ade80;
       border: 2px solid #2a2420;
+      z-index: 1;
     }
   }
 
