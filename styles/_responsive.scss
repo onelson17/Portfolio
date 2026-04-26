@@ -1,8 +1,4 @@
 @media (max-width: 900px) {
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-
   .contact-wrap {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -21,10 +17,11 @@
   section {
     padding: 64px 20px;
   }
+
   #hero {
     min-height: auto;
-  
   }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -34,31 +31,8 @@
     aspect-ratio: 4 / 3;
   }
 
-  .services-grid {
-    grid-template-columns: 1fr;
-
-    > * { border-radius: 0 !important; }
-    > *:first-child { border-radius: var(--radius-md) var(--radius-md) 0 0 !important; }
-    > *:last-child  { border-radius: 0 0 var(--radius-md) var(--radius-md) !important; }
-  }
-
   .skills-grid {
     grid-template-columns: 1fr;
-  }
-
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .faq-item {
-    &:nth-child(odd) {
-      padding-right: 0;
-      border-right: none;
-    }
-
-    &:nth-child(even) {
-      padding-left: 0;
-    }
   }
 
   .form-row {
