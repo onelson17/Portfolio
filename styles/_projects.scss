@@ -81,8 +81,30 @@
     transition: opacity 0.35s ease;
   }
 
-  // ── HOVER : cards cliquables ──
-  &[href] {
+  // ── CTA centré visible au hover ──
+  &-cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -44%);
+    z-index: 4;
+    opacity: 0;
+    pointer-events: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: var(--radius-pill);
+    color: #111110;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: opacity 0.28s ease, transform 0.28s ease;
+  }
+
+  // ── HOVER : toutes les cards ouvrent une modale ──
+  &[data-project] {
     cursor: pointer;
 
     &:hover {
@@ -94,20 +116,11 @@
       }
 
       .project-card-info { opacity: 1; }
-    }
-  }
 
-  // ── HOVER : Sophie Bluel (non cliquable, aperçu quand même) ──
-  &:not([href]) {
-    &:hover {
-      .project-cover { opacity: 0.15; }
-
-      img {
-        opacity: 0.85;
-        transform: scale(1);
+      .project-card-cta {
+        opacity: 1;
+        transform: translate(-50%, -50%);
       }
-
-      .project-card-info { opacity: 1; }
     }
   }
 
