@@ -1,13 +1,4 @@
 @media (max-width: 900px) {
-  #about {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .about-images {
-    max-width: 420px;
-  }
-
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
