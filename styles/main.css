@@ -388,7 +388,7 @@ section.full {
 }
 #hero .hero-title {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin-top: 16px;
@@ -536,7 +536,7 @@ section.full {
 }
 .project-card .project-cover p {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.65);
   font-weight: 300;
   max-width: 220px;
 }
@@ -611,7 +611,7 @@ section.full {
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.55);
   text-transform: uppercase;
   margin-bottom: 4px;
 }
@@ -630,7 +630,7 @@ section.full {
   background: rgba(255, 255, 255, 0.08);
   border: 0.5px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-pill);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
   white-space: nowrap;
 }
 
@@ -655,7 +655,7 @@ section.full {
   background: rgba(255, 255, 255, 0.08);
   border: 0.5px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-pill);
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.72);
   font-style: italic;
   backdrop-filter: blur(6px);
 }
@@ -797,11 +797,11 @@ section.full {
   padding-top: 4px;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
-.modal-section h4 {
+.modal-section h3 {
   font-size: 10px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.55);
   font-weight: 500;
   margin-bottom: 7px;
 }
@@ -921,6 +921,11 @@ section.full {
   justify-content: flex-end;
   margin-top: 8px;
 }
+@media (max-width: 900px) {
+  .about-cta {
+    justify-content: center;
+  }
+}
 
 .skills-tabs {
   display: flex;
@@ -990,7 +995,7 @@ section.full {
   border-color: var(--black);
   transform: translateY(-2px);
 }
-.skill-card h4 {
+.skill-card h3 {
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 2px;
@@ -1209,7 +1214,7 @@ section.full {
 #experience .lang-card .lang-flag {
   font-size: 36px;
 }
-#experience .lang-card h4 {
+#experience .lang-card h3 {
   font-size: 16px;
   font-weight: 600;
   color: var(--black);
@@ -1360,7 +1365,7 @@ section.full {
 }
 .field .err {
   font-size: 12px;
-  color: #e24b4a;
+  color: #b91c1c;
   min-height: 16px;
   opacity: 0;
   transform: translateY(-4px);
@@ -1430,7 +1435,7 @@ section.full {
   border: 1px solid #bbf7d0;
   border-radius: var(--radius-sm);
   font-size: 14px;
-  color: #15803d;
+  color: #166534;
 }
 .success-msg.show {
   display: flex;

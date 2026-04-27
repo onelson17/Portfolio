@@ -67,4 +67,8 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 8px;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 }
