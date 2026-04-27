@@ -1,8 +1,38 @@
+.skills-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.skills-tab {
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 0.5px solid var(--gray-200);
+  background: transparent;
+  color: var(--gray-600);
+  transition: all 0.2s;
+
+  &.active {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+  }
+
+  &:not(.active):hover {
+    background: var(--gray-100);
+    color: var(--black);
+  }
+}
+
 .skills-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 48px;
+  margin-bottom: 28px;
   flex-wrap: wrap;
   gap: 16px;
 
@@ -10,12 +40,19 @@
     font-family: var(--font-serif);
     font-size: clamp(32px, 4vw, 48px);
     font-weight: 400;
+    line-height: 1.1;
+    color: var(--black);
+
+    em {
+      font-style: italic;
+      color: var(--gray-600);
+    }
   }
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
 

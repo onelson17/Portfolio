@@ -23,6 +23,7 @@
     <a href="#hero" class="active">Accueil</a>
     <a href="#projects">Projets</a>
     <a href="#about">À propos</a>
+    <a href="#skills">Stack</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -48,6 +49,7 @@
     <a href="#hero">Accueil</a>
     <a href="#projects">Projets</a>
     <a href="#about">À propos</a>
+    <a href="#skills">Stack</a>
     <a href="#contact">Contact</a>
   </nav>
   <div class="nav-mobile-socials">
@@ -193,30 +195,40 @@
 <!-- SKILLS -->
 <section id="skills">
   <div class="skills-header reveal">
-    <h2>Stacks & <em style="font-family: var(--font-serif); font-style: italic; font-weight: 400;">compétences</em></h2>
+    <h2>Stacks & <em>compétences</em></h2>
+  </div>
+  <div class="skills-tabs reveal">
+    <button class="skills-tab active" data-skill="all">Tout</button>
+    <button class="skills-tab" data-skill="frontend">Frontend</button>
+    <button class="skills-tab" data-skill="style">Style</button>
+    <button class="skills-tab" data-skill="outils">Outils</button>
   </div>
   <div class="skills-grid reveal">
-    <div class="skill-card">
+    <div class="skill-card" data-category="frontend">
       <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /></div>
       <div><h4>React</h4><span>UI / Composants</span></div>
     </div>
-    <div class="skill-card">
+    <div class="skill-card" data-category="frontend">
       <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /></div>
       <div><h4>JavaScript</h4><span>ES6+ / DOM</span></div>
     </div>
-    <div class="skill-card">
+    <div class="skill-card" data-category="style">
       <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /></div>
       <div><h4>CSS3</h4><span>Flexbox · Grid · Animations</span></div>
     </div>
-    <div class="skill-card">
+    <div class="skill-card" data-category="style">
+      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass" /></div>
+      <div><h4>Sass</h4><span>Variables · Nesting · Partials</span></div>
+    </div>
+    <div class="skill-card" data-category="frontend">
       <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /></div>
       <div><h4>HTML5</h4><span>Sémantique · Accessibilité</span></div>
     </div>
-    <div class="skill-card">
+    <div class="skill-card" data-category="outils">
       <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" /></div>
       <div><h4>Git & GitHub</h4><span>Versioning · Collaboration</span></div>
     </div>
-    <div class="skill-card">
+    <div class="skill-card" data-category="outils">
       <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" /></div>
       <div><h4>Figma</h4><span>Design · Prototypage</span></div>
     </div>
@@ -225,37 +237,197 @@
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <p class="section-label reveal">Parcours</p>
-  <div class="exp-grid">
-    <div class="exp-item reveal">
-      <div class="exp-period">2024 — 2025</div>
-      <div class="exp-info">
-        <h3>OpenClassrooms</h3>
-        <span>Formation Développeur Front-End · Certification Bac+2</span>
+  <p class="section-label reveal">Mon parcours</p>
+  <h2 class="exp-title reveal">Parcours & <em>formations</em></h2>
+
+  <div class="exp-tabs reveal">
+    <button class="exp-tab active" data-tab="pro">Expériences</button>
+    <button class="exp-tab" data-tab="formation">Formations</button>
+    <button class="exp-tab" data-tab="langues">Langues</button>
+  </div>
+
+  <!-- EXPÉRIENCES -->
+  <div class="exp-grid" id="tab-pro">
+
+    <div class="exp-card">
+      <div class="exp-card-header">
+        <div class="exp-card-icon">
+          <img src="https://logo.clearbit.com/alyzia.fr" alt="Alyzia"
+               onerror="this.style.display='none';this.parentElement.innerHTML='✈️'"/>
+        </div>
+        <div class="exp-card-meta">
+          <h3>Agent de piste · Coordinateur de vol</h3>
+          <span>Alyzia — Aéroport CDG</span>
+        </div>
+      </div>
+      <div class="exp-card-period">📅 Juin 2024 — Juin 2025</div>
+      <p>Communication radio en anglais, gestion des opérations de piste, coordination sous pression et respect strict des procédures de sécurité.</p>
+      <div class="exp-card-tags">
+        <span>Organisation</span><span>Gestion du stress</span><span>Anglais C1</span>
       </div>
     </div>
-    <div class="exp-item reveal">
-      <div class="exp-period">2024</div>
-      <div class="exp-info">
-        <h3>Projet Kasa</h3>
-        <span>Application de location immobilière · React · React Router</span>
+
+    <div class="exp-card">
+      <div class="exp-card-header">
+        <div class="exp-card-icon">
+          <img src="https://logo.clearbit.com/bigmoustache.com" alt="Big Moustache"
+               onerror="this.style.display='none';this.parentElement.innerHTML='✂️'"/>
+        </div>
+        <div class="exp-card-meta">
+          <h3>Barbier</h3>
+          <span>Big Moustache · Hugues LaCoiff</span>
+        </div>
+      </div>
+      <div class="exp-card-period">📅 2021 — 2023</div>
+      <p>Accueil et conseil client, gestion du planning, encaissements et suivi de l'activité. Sens du détail et satisfaction client au cœur du métier.</p>
+      <div class="exp-card-tags">
+        <span>Relation client</span><span>Gestion</span><span>Rigueur</span>
       </div>
     </div>
-    <div class="exp-item reveal">
-      <div class="exp-period">2024</div>
-      <div class="exp-info">
-        <h3>Projet Sophie Bluel</h3>
-        <span>Portfolio photographe dynamique · JavaScript · Fetch API</span>
+
+    <div class="exp-card">
+      <div class="exp-card-header">
+        <div class="exp-card-icon">
+          <img src="https://logo.clearbit.com/id-logistics.com" alt="ID Logistics"
+               onerror="this.style.display='none';this.parentElement.innerHTML='📦'"/>
+        </div>
+        <div class="exp-card-meta">
+          <h3>Réceptionniste — Secteur Luxe</h3>
+          <span>ID Logistics — CDG</span>
+        </div>
+      </div>
+      <div class="exp-card-period">📅 Nov 2023 — Fév 2024</div>
+      <p>Gestion des stocks, réception et contrôle des livraisons, coordination avec les boutiques pour la disponibilité des produits.</p>
+      <div class="exp-card-tags">
+        <span>Logistique</span><span>Coordination</span><span>Rigueur</span>
       </div>
     </div>
-    <div class="exp-item reveal">
-      <div class="exp-period">2023</div>
-      <div class="exp-info">
-        <h3>Projet Booki</h3>
-        <span>Intégration responsive · HTML5 · CSS3 · Flexbox</span>
+
+    <div class="exp-card">
+      <div class="exp-card-header">
+        <div class="exp-card-icon">🏀</div>
+        <div class="exp-card-meta">
+          <h3>Entraîneur Basket-Ball</h3>
+          <span>Équipes jeunes (11–15 ans)</span>
+        </div>
+      </div>
+      <div class="exp-card-period">📅 3 ans</div>
+      <p>Encadrement d'équipes jeunes après 10 ans de pratique au niveau régional. Pédagogie, leadership et gestion de groupe.</p>
+      <div class="exp-card-tags">
+        <span>Leadership</span><span>Pédagogie</span><span>Travail d'équipe</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FORMATIONS -->
+  <div class="exp-grid hidden" id="tab-formation">
+
+    <div class="exp-card">
+      <div class="exp-card-header">
+        <div class="exp-card-icon">
+          <img src="https://logo.clearbit.com/openclassrooms.com" alt="OpenClassrooms"
+               onerror="this.style.display='none';this.parentElement.innerHTML='⚛️'"/>
+        </div>
+        <div class="exp-card-meta">
+          <h3>Développeur Front-End</h3>
+          <span>OpenClassrooms</span>
+        </div>
+      </div>
+      <div class="exp-card-period">📅 28 Juillet 2024 — 27 Avril 2025</div>
+      <p>Formation intensive en développement Front-End avec spécialisation React. Projets concrets : Booki, Sophie Bluel, Kasa.</p>
+      <div class="exp-card-tags">
+        <span>React</span><span>JavaScript</span><span>Sass</span><span>HTML5</span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-header">
+        <div class="exp-card-icon">
+          <img src="https://logo.clearbit.com/alyzia.fr" alt="Alyzia"
+               onerror="this.style.display='none';this.parentElement.innerHTML='📡'"/>
+        </div>
+        <div class="exp-card-meta">
+          <h3>Coordinateur de vol (CZA)</h3>
+          <span>Alyzia Excellence Academy</span>
+        </div>
+      </div>
+      <div class="exp-card-period">📅 2024 — 2025</div>
+      <p>Certification opérateur casque anglais, formation Loader, procédures aéroportuaires et certificat coordinateur de vol.</p>
+      <div class="exp-card-tags">
+        <span>Sécurité</span><span>Procédures</span><span>Anglais</span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-header">
+        <div class="exp-card-icon">
+          <img src="https://logo.clearbit.com/esupcom.fr" alt="ESUPCOM"
+               onerror="this.style.display='none';this.parentElement.innerHTML='📣'"/>
+        </div>
+        <div class="exp-card-meta">
+          <h3>Bachelor Communication & Marketing Digital</h3>
+          <span>ESUPCOM</span>
+        </div>
+      </div>
+      <div class="exp-card-period">📅 2019 — 2021</div>
+      <p>Stratégies de communication, gestion de projet, outils créatifs. Esprit d'analyse et compréhension des besoins cibles.</p>
+      <div class="exp-card-tags">
+        <span>Marketing</span><span>Communication</span><span>Gestion de projet</span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-header">
+        <div class="exp-card-icon">📊</div>
+        <div class="exp-card-meta">
+          <h3>Bac STMG — Gestion Finance</h3>
+          <span>Lycée Henri Sellier</span>
+        </div>
+      </div>
+      <div class="exp-card-period">📅 2016</div>
+      <p>Comptabilité, management, économie et gestion. Bases solides en organisation et analyse financière.</p>
+      <div class="exp-card-tags">
+        <span>Gestion</span><span>Management</span><span>Économie</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LANGUES -->
+  <div class="lang-grid hidden" id="tab-langues">
+    <div class="lang-card">
+      <div class="lang-flag">🇫🇷</div>
+      <h4>Français</h4>
+      <span>Langue maternelle</span>
+      <div class="lang-dots">
+        <div class="lang-dot filled"></div><div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div><div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+      </div>
+    </div>
+    <div class="lang-card">
+      <div class="lang-flag">🇬🇧</div>
+      <h4>Anglais</h4>
+      <span>Niveau avancé — C1</span>
+      <div class="lang-dots">
+        <div class="lang-dot filled"></div><div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div><div class="lang-dot filled"></div>
+        <div class="lang-dot"></div>
+      </div>
+    </div>
+    <div class="lang-card">
+      <div class="lang-flag">🇭🇹</div>
+      <h4>Créole haïtien</h4>
+      <span>Langue maternelle</span>
+      <div class="lang-dots">
+        <div class="lang-dot filled"></div><div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div><div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
       </div>
     </div>
   </div>
+
 </section>
 
 <!-- CONTACT -->
@@ -329,6 +501,7 @@
     <a href="#hero">Accueil</a>
     <a href="#projects">Projets</a>
     <a href="#about">À propos</a>
+    <a href="#skills">Stack</a>
     <a href="#contact">Contact</a>
   </nav>
 </footer>
@@ -428,6 +601,29 @@ const revealObs = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 
 reveals.forEach(el => revealObs.observe(el));
+
+// ── ONGLETS SKILLS ──
+document.querySelectorAll('.skills-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const cat = tab.dataset.skill;
+    document.querySelectorAll('.skills-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelectorAll('.skill-card').forEach(card => {
+      card.style.display = (cat === 'all' || card.dataset.category === cat) ? '' : 'none';
+    });
+  });
+});
+
+// ── ONGLETS PARCOURS ──
+document.querySelectorAll('.exp-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.tab;
+    document.querySelectorAll('.exp-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.exp-grid, .lang-grid').forEach(g => g.classList.add('hidden'));
+    tab.classList.add('active');
+    document.getElementById('tab-' + target).classList.remove('hidden');
+  });
+});
 
 // ── CONTACT FORM VALIDATION ──
 const formFields = {
