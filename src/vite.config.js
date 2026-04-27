@@ -7,7 +7,7 @@ export default defineConfig({
     outDir: '../js',
     emptyOutDir: false,
     rollupOptions: {
-      input: 'src/main.jsx',
+      input: 'main.jsx',
       output: {
         entryFileNames: 'contact-bundle.js',
         chunkFileNames: 'contact-chunk.js',

@@ -1,5 +1,4 @@
-import { useState, useRef } from 'react'
-import emailjs from 'emailjs-com'
+import { useState } from 'react'
 
 const rules = {
   fname:   [v => v.length < 2 ? 'Minimum 2 caractères' : ''],
@@ -13,7 +12,6 @@ const rules = {
 }
 
 export default function ContactForm() {
-  const formRef = useRef()
   const [fields, setFields] = useState({ fname: '', lname: '', email: '', subject: '', message: '' })
   const [errors, setErrors] = useState({})
   const [touched, setTouched] = useState({})
@@ -56,29 +54,19 @@ export default function ContactForm() {
     if (!valid) return
 
     setLoading(true)
-    try {
-      await emailjs.sendForm(
-        'VOTRE_SERVICE_ID',
-        'VOTRE_TEMPLATE_ID',
-        formRef.current,
-        'VOTRE_PUBLIC_KEY'
-      )
-      setSuccess(true)
-      setFields({ fname: '', lname: '', email: '', subject: '', message: '' })
-      setTouched({})
-      setTimeout(() => setSuccess(false), 5000)
-    } catch (err) {
-      console.error('EmailJS error:', err)
-    } finally {
-      setLoading(false)
-    }
+    await new Promise(resolve => setTimeout(resolve, 1500))
+    setLoading(false)
+    setSuccess(true)
+    setFields({ fname: '', lname: '', email: '', subject: '', message: '' })
+    setTouched({})
+    setTimeout(() => setSuccess(false), 5000)
   }
 
   const isValid  = name => touched[name] && !errors[name] && fields[name]
   const hasError = name => touched[name] && errors[name]
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} noValidate className="contact-form">
+    <form onSubmit={handleSubmit} noValidate className="contact-form">
       <div className="form-row">
         <div className="field">
           <label htmlFor="fname">Prénom</label>
