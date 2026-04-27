@@ -44,7 +44,7 @@
 </header>
 
 <!-- MOBILE MENU -->
-<div class="nav-mobile-menu" id="nav-mobile-menu" aria-hidden="true">
+<div class="nav-mobile-menu" id="nav-mobile-menu" inert>
   <nav>
     <a href="#hero">Accueil</a>
     <a href="#projects">Projets</a>
@@ -63,6 +63,9 @@
     </a>
   </div>
 </div>
+
+<!-- MAIN CONTENT -->
+<main>
 
 <!-- HERO -->
 <section id="hero">
@@ -99,7 +102,7 @@
 
 <!-- PROJECTS -->
 <section id="projects">
-  <p class="section-label reveal">Mes projets</p>
+  <h2 class="section-label reveal">Mes projets</h2>
   <div class="projects-grid">
 
     <!-- KASA — large, déployé -->
@@ -206,31 +209,31 @@
   <div class="skills-grid reveal">
     <div class="skill-card" data-category="frontend">
       <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /></div>
-      <div><h4>React</h4><span>UI / Composants</span></div>
+      <div><h3>React</h3><span>UI / Composants</span></div>
     </div>
     <div class="skill-card" data-category="frontend">
       <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /></div>
-      <div><h4>JavaScript</h4><span>ES6+ / DOM</span></div>
+      <div><h3>JavaScript</h3><span>ES6+ / DOM</span></div>
     </div>
     <div class="skill-card" data-category="style">
       <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /></div>
-      <div><h4>CSS3</h4><span>Flexbox · Grid · Animations</span></div>
+      <div><h3>CSS3</h3><span>Flexbox · Grid · Animations</span></div>
     </div>
     <div class="skill-card" data-category="style">
       <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass" /></div>
-      <div><h4>Sass</h4><span>Variables · Nesting · Partials</span></div>
+      <div><h3>Sass</h3><span>Variables · Nesting · Partials</span></div>
     </div>
     <div class="skill-card" data-category="frontend">
       <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /></div>
-      <div><h4>HTML5</h4><span>Sémantique · Accessibilité</span></div>
+      <div><h3>HTML5</h3><span>Sémantique · Accessibilité</span></div>
     </div>
     <div class="skill-card" data-category="outils">
       <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" /></div>
-      <div><h4>Git & GitHub</h4><span>Versioning · Collaboration</span></div>
+      <div><h3>Git &amp; GitHub</h3><span>Versioning · Collaboration</span></div>
     </div>
     <div class="skill-card" data-category="outils">
       <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" /></div>
-      <div><h4>Figma</h4><span>Design · Prototypage</span></div>
+      <div><h3>Figma</h3><span>Design · Prototypage</span></div>
     </div>
   </div>
 </section>
@@ -398,7 +401,7 @@
   <div class="lang-grid hidden" id="tab-langues">
     <div class="lang-card">
       <div class="lang-flag">🇫🇷</div>
-      <h4>Français</h4>
+      <h3>Français</h3>
       <span>Langue maternelle</span>
       <div class="lang-dots">
         <div class="lang-dot filled"></div><div class="lang-dot filled"></div>
@@ -408,7 +411,7 @@
     </div>
     <div class="lang-card">
       <div class="lang-flag">🇬🇧</div>
-      <h4>Anglais</h4>
+      <h3>Anglais</h3>
       <span>Niveau avancé — C1</span>
       <div class="lang-dots">
         <div class="lang-dot filled"></div><div class="lang-dot filled"></div>
@@ -418,7 +421,7 @@
     </div>
     <div class="lang-card">
       <div class="lang-flag">🇭🇹</div>
-      <h4>Créole haïtien</h4>
+      <h3>Créole haïtien</h3>
       <span>Langue maternelle</span>
       <div class="lang-dots">
         <div class="lang-dot filled"></div><div class="lang-dot filled"></div>
@@ -457,6 +460,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
   <p>© 2025 Onelson Cadeau — Tous droits réservés</p>
@@ -470,7 +475,7 @@
 </footer>
 
 <!-- MODAL PROJET -->
-<div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+<div class="modal-overlay" id="modal-overlay" inert>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <button class="modal-close" id="modal-close" aria-label="Fermer">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -491,23 +496,23 @@
 
       <div class="modal-sections">
         <div class="modal-section">
-          <h4>Contexte</h4>
+          <h3>Contexte</h3>
           <p id="modal-contexte"></p>
         </div>
         <div class="modal-section">
-          <h4>Objectifs</h4>
+          <h3>Objectifs</h3>
           <p id="modal-objectifs"></p>
         </div>
         <div class="modal-section">
-          <h4>Compétences développées</h4>
+          <h3>Compétences développées</h3>
           <p id="modal-competences"></p>
         </div>
         <div class="modal-section">
-          <h4>Résultats</h4>
+          <h3>Résultats</h3>
           <p id="modal-resultats"></p>
         </div>
         <div class="modal-section">
-          <h4>Perspectives</h4>
+          <h3>Perspectives</h3>
           <p id="modal-perspectives"></p>
         </div>
       </div>

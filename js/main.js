@@ -6,7 +6,7 @@ hamburger.addEventListener('click', () => {
   const isOpen = hamburger.classList.toggle('open');
   mobileMenu.classList.toggle('open', isOpen);
   hamburger.setAttribute('aria-expanded', isOpen);
-  mobileMenu.setAttribute('aria-hidden', !isOpen);
+  mobileMenu.toggleAttribute('inert', !isOpen);
 });
 
 mobileMenu.querySelectorAll('a').forEach(link => {
@@ -14,7 +14,7 @@ mobileMenu.querySelectorAll('a').forEach(link => {
     hamburger.classList.remove('open');
     mobileMenu.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
-    mobileMenu.setAttribute('aria-hidden', 'true');
+    mobileMenu.setAttribute('inert', '');
   });
 });
 
@@ -171,14 +171,15 @@ function openModal(id) {
   document.getElementById('modal-perspectives').textContent= data.perspectives;
 
   modalOverlay.classList.add('open');
-  modalOverlay.setAttribute('aria-hidden', 'false');
+  modalOverlay.removeAttribute('inert');
   document.body.style.overflow = 'hidden';
   modalEl.querySelector('.modal-body').scrollTop = 0;
+  modalEl.querySelector('.modal-close').focus();
 }
 
 function closeModal() {
   modalOverlay.classList.remove('open');
-  modalOverlay.setAttribute('aria-hidden', 'true');
+  modalOverlay.setAttribute('inert', '');
   document.body.style.overflow = '';
 }
 
