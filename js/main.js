@@ -74,7 +74,7 @@ const DEVICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons';
 const PROJECT_DATA = {
   kasa: {
     title: 'Kasa',
-    cover: 'assets/images/Kasa-1.png',
+    cover: 'assets/images/Kasa-1.webp',
     coverBg: '#2d1212',
     logos: [
       { name: 'React',        icon: `${DEVICON}/react/react-original.svg` },
@@ -91,7 +91,7 @@ const PROJECT_DATA = {
   },
   sophie: {
     title: 'Sophie Bluel',
-    cover: 'assets/images/SophieB-1.png',
+    cover: 'assets/images/SophieB-1.webp',
     coverBg: '#14141c',
     logos: [
       { name: 'JavaScript', icon: `${DEVICON}/javascript/javascript-original.svg` },
@@ -109,7 +109,7 @@ const PROJECT_DATA = {
   },
   booki: {
     title: 'Booki',
-    cover: 'assets/images/Booki-2.png',
+    cover: 'assets/images/Booki-2.webp',
     coverBg: '#0a1528',
     logos: [
       { name: 'HTML5',   icon: `${DEVICON}/html5/html5-original.svg` },
