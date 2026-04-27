@@ -432,9 +432,9 @@
 
 <!-- CONTACT -->
 <section id="contact">
+  <p class="section-label reveal">Contact</p>
   <div class="contact-wrap">
     <div class="contact-info reveal">
-      <p class="section-label">Contact</p>
       <h2>Travaillons<br/><em>ensemble</em></h2>
       <p>Je suis toujours ouvert à de nouveaux projets, collaborations ou simplement une conversation autour du développement web. N'hésitez pas à me contacter.</p>
       <div class="contact-links">
@@ -574,20 +574,18 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 });
 
 // ── NAV ACTIVE STATE ──
-const sections = document.querySelectorAll('section[id], div[id]');
+const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('#navbar .nav-links a');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      navLinks.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
-      });
-    }
-  });
-}, { threshold: 0.3 });
+function updateActiveNav() {
+  const trigger = window.scrollY + window.innerHeight * 0.35;
+  let current = '';
+  sections.forEach(s => { if (s.offsetTop <= trigger) current = s.id; });
+  navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+}
 
-sections.forEach(s => observer.observe(s));
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+updateActiveNav();
 
 // ── SCROLL REVEAL ──
 const reveals = document.querySelectorAll('.reveal');
